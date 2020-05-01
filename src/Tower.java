@@ -4,11 +4,7 @@ import java.util.ArrayList;
 
 public class Tower{
 
-	private ArrayList<Flyable> observers;
-
-	Tower(){
-		observers = new ArrayList<Flyable>();
-	}
+	private ArrayList<Flyable> observers  = new ArrayList<Flyable>();
 
 	public void register(Flyable flyable){
 		System.out.printf("Tower says: %s registered to weather tower.\n",flyable.toString());
@@ -20,8 +16,15 @@ public class Tower{
 	}
 
 	protected void conditionsChanged(){
-		for(Flyable i : (ArrayList<Flyable>)observers.clone()){
-			i.updateConditions();
+		Object cl = observers.clone();
+		if (cl instanceof ArrayList<?>){
+			ArrayList<?> bf = (ArrayList<?>) cl;
+			for(int x = 0; x < bf.size(); x++){
+				Object i = bf.get(x);
+				if(i instanceof Flyable){
+					((Flyable)i).updateConditions();
+				}
+			}
 		}
 	}
 

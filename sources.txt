@@ -1,1 +1,11 @@
-src/Aircraft.java src/avaj_launcher.java src/Coordinates.java src/Flyable.java src/Tower.java src/WeatherProvider.java src/WeatherTower.java
+./src/avaj_launcher.java
+./src/Coordinates.java
+./src/Flyable.java
+./src/Tower.java
+./src/WeatherProvider.java
+./src/WeatherTower.java
+./src/_aircraft/Aircraft.java
+./src/_aircraft/AircraftFactory.java
+./src/_aircraft/Baloon.java
+./src/_aircraft/Helicopter.java
+./src/_aircraft/JetPlane.java
