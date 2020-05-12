@@ -1,0 +1,1 @@
+java src.avaj_launcher  scenario.txt

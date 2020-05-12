@@ -1,0 +1,1 @@
+javac -sourcepath @sources.txt
